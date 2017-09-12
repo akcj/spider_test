@@ -35,7 +35,7 @@ def proxy_handler_spider(url, proxy_server, username, password, repeat_request_n
         if repeat_request_num > 0:
             #判断错误值中code属性是否存在，并且错误code在500-600之间，则重复下载该url
             if hasattr(e,'code') and  500 <= e.code < 600:
-                return download(url,repeat_request_num-1)
+                return proxy_handler_spider(url, proxy_server, username, password, repeat_request_num-1)
     return html
 
 if __name__ == '__main__':
