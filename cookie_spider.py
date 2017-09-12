@@ -1,7 +1,6 @@
 #-*- coding:utf-8 -*-
 
 import urllib2
-import urllib
 import ssl
 """
 利用已登录的cookie信息登录网站
