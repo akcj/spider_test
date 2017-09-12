@@ -26,6 +26,7 @@ def proxy_handler_spider(url, proxy_server, username, password, repeat_request_n
         request = urllib2.Request(url)
         response = opener.open(request)
         html = response.read()
+        return html
 
     except urllib2.URLError as e:
         print 'Download error', e.reason
