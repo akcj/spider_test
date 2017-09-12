@@ -42,7 +42,7 @@ def opener_spider(url, repeat_request_num=2):
             #判断错误值中code属性是否存在，并且错误code在500-600之间，则重复下载该url
             if hasattr(e,'code') and  500 <= e.code < 600:
                 return opener_spider(url,repeat_request_num-1)
-    return html
+        return html
 
 if __name__ == '__main__':
     url = 'https://www.xiuxiaowo.com'
