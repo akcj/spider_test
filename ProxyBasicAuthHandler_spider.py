@@ -1,8 +1,6 @@
 #-*- coding:utf-8 -*-
 
 import urllib2
-import random
-
 """
 代理授权验证抓取网页html内容
 
